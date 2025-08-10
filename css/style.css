@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, rgb(123, 160, 230), rgb(167, 224, 241));
+    padding: 10px;
+    min-height: 100%;
+}
+
+header {
+    background: #fffcef;
+    font-size: 1.5rem;
+    height: auto;
+    padding-left: 4vw;
+    padding-top: 2vh;
+    margin: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 4.5vb;
+    padding-left: 40px;
+
+}
+
+nav {
+    background: #fffcef;
+    height: auto;
+    padding-left: 6vw;
+    padding-bottom: 5px;
+    display: flex;
+    gap: 15vb;
+    position: relative;
+}
+
+footer {
+    height: 10vh;
+    align-items: center;
+    text-align: right;
+    padding-right: 2vw;
+    padding-top: 3vw;
+    margin: 20px;
+    font-size: .9rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 3vb;
+}
+
+a:hover {
+    color: rgb(123, 160, 230);
+    text-decoration: underline;
+}
+
+section {
+    padding: 5vh;
+    border-radius: 10px;
+    margin: 20px;
+ background-color: #fffcef;
+}
+
+span {
+    display: inline-block;
+    font-size: 3vb;
+    margin-bottom: 4vh;
+
+}
+
+.stats {
+    line-height: 270%;
+}
+
+
+
+form input[type="text"] {
+    height: 7vh;
+    width: 45vw;
+    margin: 20px;
+    border-radius: 7px;
+    border: 2px solid rgb(122, 158, 224);
+    box-shadow: 2px 4px 10px rgb(123, 160, 230, .5);
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+form input[type="button"],button ,.item button{
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 8px 10px;
+    background-color: rgb(151, 206, 223);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+input[type="button"] :active ,button:active {
+    background-color: #fffcef;
+    color: rgb(151, 206, 223);
+
+}
+.item ,.leftSide{
+    display: flex;
+    gap: 20vw;
+    flex-wrap: wrap;
+}
+.leftSide input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+width: 25px;
+height: 25px;
+border: 2px solid rgb(122, 158, 224);
+border-radius: 4px;
+cursor: pointer;
+vertical-align: middle;
+margin: 3vw;
+}
+.leftSide input[type="checkbox"]:checked::after{
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgb(122, 158, 224);
+    color: white;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(122, 158, 224);
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.list span{
+    color: rgb(123, 160, 230);
+}
+.controls{
+    color: rgb(122, 158, 224);
+    margin-top: 7vh;
+}
+.controls .fa-trash:active{
+    color: rgb(233, 27, 27);
+}
+.controls .fa-pencil:active{
+    color: rgb(120, 184, 120);
+}
+span.stat{
+    color: rgb(122, 158, 224);
+    font-weight: bold;
+    font-size: 1.1 rem;
+}
+#notification{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    color: wheat;
+    border-radius: 10px;
+    box-shadow:  0 2px 6px rgba(0, 0, 0, .3);
+    font-weight: bold;
+    font-style: italic;
+    pointer-events: none;
+    background-color: #a0dfa0;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease ;
+    transform: translatey(-20px);
+    z-index: -1;
+}
+#notification.show{
+    opacity: 1;
+    z-index: 9999;
+    transform: translateY(0);
+    color: white;
+}
+#notification.error{
+    background-color: rgb(238, 137, 137);
+    z-index: 9999;
+}
+@media (max-width: 885px){
+    .leftSide{
+        flex-direction: row;
+        gap: 0;
+  }
+ 
+.controls{
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    gap: 3vw;
+    margin-left: 10vw;
+    margin-top: 3vh;
+}
+    
+    blockquote {
+        padding-left: 5px;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    section , header {
+        margin: 0;
+        padding: 1rem;
+    }
+    .stat p , .stat span{
+        margin-bottom: 0;
+        line-height: .6;
+    }
+}
+@media (max-width: 450px){
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+    .leftSide div{
+        height: fit-content;
+    }
+    .leftSide{
+        margin-bottom: 3vh;
+    }
+    .controls{
+        padding: 0 0 0 15px;
+        margin: 1.7vh 0 0 0;
+    }
+    .stats p , .stats span{
+        margin: 0;
+    }
+}

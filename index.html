@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body class="container">
+    <header>
+        <h2>welcome to our to do list website</h2>
+        <nav>
+            <a href="#stats"> stats </a>
+            <a href="#goals"> goals </a>
+        </nav>
+    </header>
+    
+        <blockquote>a successful day start with one completed task.</blockquote>
+        <section>
+            <span>daily tasks : </span>
+            <form action="#" method="post" class="add-task-form" data-category="daily">
+                <label for="task">Enter task</label>
+                <input type="text" id="task" name="task"> 
+                <button type="submit" onclick="handleAddTask(event)"   class="addBtn" id="btn"> add</button>
+            </form><br>
+            <div class="list" id="daily">
+
+            </div>
+        </section>
+        <blockquote>dream big, start small, act now</blockquote>
+        <section>
+            <span>weekly goals : </span>
+            <form action="submit" method="post" class="add-task-form" data-category="weekly">
+                    <label for="task">Enter task</label>
+                <input type="text" id="task "  name="task"> 
+                    <button type="submit" onclick="handleAddTask(event)" class="addBtn" id="btn"> Add</button>
+                </form>
+                <div class="list" id="weekly">
+
+                </div>
+        </section>
+        <blockquote>
+            push through the ordinary to find the extraordinary.
+        </blockquote>
+        <section>
+            <span>challenges : </span>
+            <form action="submit" method="post" class="add-task-form" data-category="challenges">
+                    <label for="task">Enter challenge</label>
+                    <input type="text" id="task" name="task"> 
+                <button type="submit" onclick="handleAddTask(event)" class="addBtn"  id="btn"> Add</button>
+                </form>
+                <div class="list" id="challenges">
+
+                </div>
+        </section>
+    
+
+    <blockquote >
+        <h3>success is the sum of small efforts, repeated day in and day out .</h3>
+    </blockquote>
+
+        <section>
+            <h4>tasks will take long time to have been done </h4>
+
+            <span> stretch tasks : </span>
+            <form action="submit" method="post" class="add-task-form" data-category="stretch-tasks">
+                <label for="task">Enter task</label>
+                <input type="text" id="task" name="task"> 
+                <button type="submit" onclick="handleAddTask(event)" class="addBtn" id="btn"> Add</button>
+            </form>
+            <div class="list" id="stretch-tasks">
+
+            </div>
+        </section>
+        <blockquote>
+            you'r building something the future will thank you for.
+        </blockquote>
+        <section>
+            <span> your goals : </span>
+            <form action="submit" method="post" class="add-task-form" data-category="goals">
+                <label for="task">Enter goal</label>
+                <input type="text" id="task" name="task"> 
+                <button type="button" onclick="handleAddTask(event)" class="addBtn" id="btn" > Add</button>
+            </form>
+            <div class="list" id="goals">
+
+            </div>
+        </section>
+
+    <blockquote >
+        <h4> you'r stronger than procrastination and closer to your goals</h4>
+    </blockquote>
+        <section>
+            <span> your stats : </span>
+            <div class="stats">
+                <p><span class="stat">Tasks Added Today:</span> <span id="tasks-added-today">0</span></p>
+                <p> <span class="stat">Tasks Completed: </span> <span id="tasks-completed">0</span></p>
+                <p><span class="stat">Achievement Rate:</span> <span id="achievement-rate">0%</span></p>
+                </div>
+        </section>
+
+    <footer> made by donia afify | @copy ;2025 </footer>
+    <div class="notification" id="notification">
+
+    </div>
+    <script src="test.js"> </script>
+
+</body>
+
+</html>
