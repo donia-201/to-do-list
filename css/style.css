@@ -185,12 +185,13 @@ span.stat{
     background-color: rgb(238, 137, 137);
     z-index: 9999;
 }
+/*--------------meduim screanes--------------------------------*/
 @media (max-width: 885px){
     .leftSide{
         flex-direction: row;
         gap: 0;
-  }
- 
+    }
+    
 .controls{
     display: flex;
     align-self: start;
@@ -214,7 +215,13 @@ span.stat{
         margin-bottom: 0;
         line-height: .6;
     }
+    .caveat-brush-regular {
+        font-family: "Caveat Brush", cursive;
+        font-weight: 400;
+        font-style: normal;
+        }
 }
+/* ---------------small screanes----------------------------------*/
 @media (max-width: 450px){
     .list{
         display: flex;
@@ -233,4 +240,9 @@ span.stat{
     .stats p , .stats span{
         margin: 0;
     }
+    .caveat-brush-regular {
+        font-family: "Caveat Brush", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
 }

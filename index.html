@@ -6,14 +6,17 @@
     <title>to do list </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 </head>
 
 <body class="container">
     <header>
         <h2>welcome to our to do list website</h2>
         <nav>
-            <a href="#stats"> stats </a>
-            <a href="#goals"> goals </a>
+            <a href="#stat"> stats </a>
+            <a href="#goal"> goals </a>
         </nav>
     </header>
     
@@ -74,10 +77,10 @@
 
             </div>
         </section>
-        <blockquote>
+        <blockquote id="goal">
             you'r building something the future will thank you for.
         </blockquote>
-        <section>
+        <section >
             <span> your goals : </span>
             <form action="submit" method="post" class="add-task-form" data-category="goals">
                 <label for="task">Enter goal</label>
@@ -92,7 +95,7 @@
     <blockquote >
         <h4> you'r stronger than procrastination and closer to your goals</h4>
     </blockquote>
-        <section>
+        <section id="stat">
             <span> your stats : </span>
             <div class="stats">
                 <p><span class="stat">Tasks Added Today:</span> <span id="tasks-added-today">0</span></p>
