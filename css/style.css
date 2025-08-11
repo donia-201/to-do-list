@@ -1,9 +1,9 @@
 * {
     box-sizing: border-box;
-    font-family: cursive;
     text-transform: capitalize;
     font-size: 1.3rem;
 }
+
 
 .container {
     display: flex;
@@ -15,8 +15,9 @@
 
 header {
     background: #fffcef;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     height: auto;
+    font-weight: bold;
     padding-left: 4vw;
     padding-top: 2vh;
     margin: 20px;
